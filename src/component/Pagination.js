@@ -1,10 +1,14 @@
-import React from 'react'
+// Import React module
+import React from 'react';
+import './Pagination.css';
 
-export default function Pagination({gotoNextPage, gotoPreviusPage}) {
+
+// Define the Pagination functional component
+export default function Pagination({ gotoNextPage, gotoPreviusPage }) {
   return (
-    <div>
-       {gotoPreviusPage && <button onClick={gotoPreviusPage}>Previus Page</button>}
-       {gotoNextPage && <button onClick={gotoNextPage}>Next Page</button>}
+    <div className='button-container'>
+      {gotoPreviusPage && <button className='previus-button' onClick={gotoPreviusPage}>Previous Page</button>}
+      {gotoNextPage && <button className='next-button'onClick={gotoNextPage}>Next Page</button>}
     </div>
-  )
+  );
 }

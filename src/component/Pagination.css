@@ -1,0 +1,43 @@
+/* Pagination.css */
+
+/* Style for the container that wraps the buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Add some margin to create space between the buttons and other content */
+  }
+  
+  /* Common button styles */
+  .button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for the previous button */
+  .previus-button {
+    background-color: #e74c3c;
+    color: #fff;
+    margin-right: 10px; /* Add some space between the buttons */
+  }
+  
+  /* Hover effect for the previous button */
+  .previus-button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Style for the next button */
+  .next-button {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  /* Hover effect for the next button */
+  .next-button:hover {
+    background-color: #27ae60;
+  }
+  
