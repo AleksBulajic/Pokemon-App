@@ -24,6 +24,7 @@ function App() {
         setNextPageUrl(res.data.next);
         setPreviusPageUrl(res.data.previous);
         setPokemon(res.data.results.map((p) => p.name));
+        console.log(res.data.results)
       } catch (error) {
         if (axios.isCancel(error)) {
           // Request canceled
@@ -52,7 +53,10 @@ function App() {
   return (
     <>
       <PokemonList pokemon={pokemon} />
-      <Pagination gotoNextPage={gotoNextPage} gotoPreviusPage={gotoPreviusPage} />
+      <Pagination
+        gotoNextPage={nextPageUrl ? gotoNextPage : null}
+        gotoPreviusPage={previusPageUrl ? gotoPreviusPage : null}
+      />
     </>
   );
 }

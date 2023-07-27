@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Pagination() {
+export default function Pagination({gotoNextPage, gotoPreviusPage}) {
   return (
-    <div>Pagination</div>
+    <div>
+       {gotoPreviusPage && <button onClick={gotoPreviusPage}>Previus Page</button>}
+       {gotoNextPage && <button onClick={gotoNextPage}>Next Page</button>}
+    </div>
   )
 }
